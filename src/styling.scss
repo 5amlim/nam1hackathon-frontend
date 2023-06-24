@@ -1,0 +1,17 @@
+@import '/styling/dashboard.scss';
+@import '/styling/landing.scss';
+@import '/styling/login.scss';
+
+html,
+body,
+.App,
+#root {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+	scroll-behavior: smooth;
+	background-color: white;
+}
