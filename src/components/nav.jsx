@@ -8,7 +8,7 @@ export const Nav = () => {
 			>
 				<div className="container-fluid">
 					<a className="navbar-brand" href="#">
-						Expand at md
+						REDDY
 					</a>
 					<button
 						className="navbar-toggler"

@@ -1,3 +1,4 @@
+import dogImg from '/assets/dog.jpg';
 export const Data = {
 	petInfo: {
 		0: {
@@ -21,7 +22,7 @@ export const Data = {
 				},
 			},
 			adopted: 'April 1, 2019',
-			img: '',
+			img: 'https://images.unsplash.com/photo-1568572933382-74d440642117?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
 			type: 'Dog',
 			careInfo: {
 				bathroom: {
@@ -57,7 +58,12 @@ export const Data = {
 			carePlanName: "Summer '23 Trip",
 			link: '',
 			info: {
-				emergency: {},
+				emergency: {
+					contact: {
+						name: '',
+						contact: '',
+					},
+				},
 				important: {
 					sitter: {
 						name: 'Graham Campbell',
