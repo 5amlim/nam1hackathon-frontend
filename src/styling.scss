@@ -3,6 +3,7 @@
 @import '/styling/login.scss';
 @import '/styling/stages.scss';
 @import '/styling/nav.scss';
+@import '/styling/footer.scss';
 html,
 body,
 .App,
@@ -30,6 +31,7 @@ body,
 	display: flex;
 	flex-direction: column;
 	min-height: 25vh;
+	min-width: 300px;
 	padding: 20px 10px 20px 10px;
 	align-items: center;
 	margin-bottom: 20px;
@@ -43,6 +45,12 @@ button {
 	}
 }
 .txt-1 {
+	font-size: 1rem;
+}
+.txt-2 {
+	font-size: 1.3rem;
+}
+.txt-3 {
 	font-size: 1rem;
 }
 .card {
@@ -86,10 +94,42 @@ button {
 			top: 10px;
 		}
 	}
+	.box-card {
+		max-width: 33vw;
+	}
 }
 hr {
 	margin: 0;
 	width: 25%;
 	color: rgba(0, 0, 0, 0.8);
 	border-top: 1.5px solid rgba(0, 0, 0, 0.2);
+}
+.cls-1,
+.cls-2 {
+	fill: none;
+}
+
+.cls-4 {
+	fill: #fff;
+}
+
+.cls-5,
+.cls-6 {
+	fill: #98e2c6;
+}
+
+.cls-7 {
+	fill: #7fae9e;
+}
+
+.cls-8 {
+	fill: #25292c;
+}
+
+.cls-6 {
+	opacity: 0.2;
+}
+
+.cls-2 {
+	clip-path: url(#clippath);
 }

@@ -51,3 +51,16 @@ nav {
 		-webkit-overflow-scrolling: touch;
 	}
 }
+.navbar-brand {
+	img {
+		height: 30px;
+	}
+}
+@media screen and (width>768px) {
+	.navbar-nav {
+		width: 620px;
+		li {
+			width: 20%;
+		}
+	}
+}

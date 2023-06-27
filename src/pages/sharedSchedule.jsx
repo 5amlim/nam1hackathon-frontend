@@ -15,60 +15,78 @@ export const SharedSchedule = () => {
 	});
 	return (
 		<>
-			<DateCalendar fixedWeekNumber={1} showDaysOutsideCurrentMonth />
-			<div className="upcoming-task-list task-list">
-				<h2>Upcoming</h2>
-				<TaskList tasks={Object.values(tasks.upcoming)} />
-			</div>
-			<div className="completed-task-list task-list">
-				<h2>Completed</h2>
-				<CompletedTaskList tasks={Object.values(tasks.completed)} />
-			</div>
-			<div className="pet-sitter-info-container info-container">
-				<h4>Pet Sitter</h4>
-				<div className="pet-sitter-info">
-					<div className="pet-sitter-contact-photo"></div>
-					<div className="pet-sitter-contact-info">
-						<h4>{listInfo.info.important.sitter.name}</h4>
-						<h5>{listInfo.info.important.sitter.number}</h5>
-					</div>
-					<div className="pet-sitter-contact-button"></div>
+			<div className="container">
+				<div className="row">
+					<DateCalendar fixedWeekNumber={1} showDaysOutsideCurrentMonth />
 				</div>
-			</div>
-			<div className="vet-info-container info-container">
-				<h4>Vet Info</h4>
-				<InfoBox
-					title={'Clinic'}
-					info={listInfo.info.important.vet.locationName}
-				/>
-				<InfoBox
-					title={'Vet Name'}
-					info={listInfo.info.important.vet.vetName}
-				/>
-				<InfoBox
-					title={'Phone Number'}
-					info={listInfo.info.important.vet.contact}
-				/>
-			</div>
-			<div className="insurance-info-container info-container">
-				<h4>Insurance Info</h4>
-				<InfoBox
-					title={'Provider'}
-					info={listInfo.info.important.insurance.provider}
-				/>
-				<InfoBox title={'Pet Name'} info={Data.petInfo.name} />
-				<InfoBox
-					title={'Claim Report'}
-					info={listInfo.info.important.insurance.contact}
-				/>
-				<InfoBox
-					title={'CERT. Number'}
-					info={listInfo.info.important.insurance.cert}
-				/>
-				<InfoBox
-					title={'Effective Dates'}
-					info={listInfo.info.important.insurance.effective}
-				/>
+				<div className="row row-cols-1 row-cols-xl-3">
+					<div className="col">
+						<div className="upcoming-task-list task-list card box-card-2">
+							<h2 className="txt-2 no-margins">Upcoming</h2>
+							<TaskList tasks={Object.values(tasks.upcoming)} />
+						</div>
+					</div>
+					<div className="col">
+						{' '}
+						<div className="completed-task-list task-list card box-card-2">
+							<h2 className="txt-2 no-margins">Completed</h2>
+							<CompletedTaskList tasks={Object.values(tasks.completed)} />
+						</div>
+					</div>
+					<div className="col">
+						{' '}
+						<div className="pet-sitter-info-container info-container card box-card">
+							<h4 className="txt-1 no-margins">Pet Sitter</h4>
+							<div className="pet-sitter-info">
+								<div className="pet-sitter-contact-photo"></div>
+								<div className="pet-sitter-contact-info">
+									<h4>{listInfo.info.important.sitter.name}</h4>
+									<h5>{listInfo.info.important.sitter.number}</h5>
+								</div>
+								<div className="pet-sitter-contact-button"></div>
+							</div>
+						</div>
+					</div>
+					<div className="col">
+						<div className="vet-info-container info-container card box-card">
+							<h4 className="txt-1 no-margins">Vet Info</h4>
+							<InfoBox
+								title={'Clinic'}
+								info={listInfo.info.important.vet.locationName}
+							/>
+							<InfoBox
+								title={'Vet Name'}
+								info={listInfo.info.important.vet.vetName}
+							/>
+							<InfoBox
+								title={'Phone Number'}
+								info={listInfo.info.important.vet.contact}
+							/>
+						</div>
+					</div>
+					<div className="col">
+						<div className="insurance-info-container info-container card box-card">
+							<h4 className="txt-1 no-margins">Insurance Info</h4>
+							<InfoBox
+								title={'Provider'}
+								info={listInfo.info.important.insurance.provider}
+							/>
+							<InfoBox title={'Pet Name'} info={Data.petInfo.name} />
+							<InfoBox
+								title={'Claim Report'}
+								info={listInfo.info.important.insurance.contact}
+							/>
+							<InfoBox
+								title={'CERT. Number'}
+								info={listInfo.info.important.insurance.cert}
+							/>
+							<InfoBox
+								title={'Effective Dates'}
+								info={listInfo.info.important.insurance.effective}
+							/>
+						</div>
+					</div>
+				</div>
 			</div>
 		</>
 	);

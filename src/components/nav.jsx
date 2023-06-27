@@ -1,3 +1,5 @@
+import { Logo } from '../assets/svgs/logo';
+
 export const Nav = () => {
 	return (
 		<>
@@ -7,8 +9,9 @@ export const Nav = () => {
 				aria-label="Fourth navbar example"
 			>
 				<div className="container-fluid">
-					<a className="navbar-brand" href="#">
-						REDDY
+					<a className="navbar-brand d-flex align-items-center py-0" href="#">
+						<img src="/assets/nav-logo.png" className="mr-2" />
+						<h1 className="no-margins txt-1">REDDY</h1>
 					</a>
 					<button
 						className="navbar-toggler"
