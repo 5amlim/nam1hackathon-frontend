@@ -98,6 +98,33 @@
 		width: 100%;
 	}
 }
+.vBasic-box {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	h4 {
+		font-size: 1.2rem;
+	}
+	h3 {
+		font-size: 1rem;
+	}
+}
+
+.vCare-box {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	h4 {
+		font-size: 1.2rem;
+	}
+	h3 {
+		font-size: 1rem;
+	}
+	h5 {
+		font-size: 0.9rem;
+	}
+}
 .bd-placeholder-img {
 	font-size: 1.125rem;
 	text-anchor: middle;

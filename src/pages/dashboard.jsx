@@ -98,7 +98,7 @@ export const Dashboard = () => {
 						</div>
 					</div>
 					<div className="col">
-						<div className="dashboard-pet-info-box-wrapper info-wrapper-vPet box-card card">
+						<div className="dashboard-pet-info-box-wrapper info-wrapper-vPet box-card card mt-3">
 							<div className="pet-box-topnav card-topper">
 								<h2 className="txt-1 no-margins">Pet Info</h2>
 								<button>Edit</button>
@@ -126,11 +126,15 @@ export const Dashboard = () => {
 					</div>
 					<div className="col">
 						{' '}
-						<div className="dashboard-pet-info-box-wrapper info-wrapper-vBasic box-card card">
+						<div className="dashboard-pet-info-box-wrapper info-wrapper-vBasic box-card card mt-3 align-items-start">
 							<div className="pet-box-topnav card-topper">
-								<a onClick={handlePetInfoClick}>
-									<Arrow />
-								</a>
+								{desktop < 800 && (
+									<>
+										<a onClick={handlePetInfoClick}>
+											<Arrow />
+										</a>
+									</>
+								)}
 
 								<h2 className="txt-1">Basic Info</h2>
 								<button>Edit</button>
@@ -140,42 +144,52 @@ export const Dashboard = () => {
 									{' '}
 									<div className="vBasic-box">
 										<h4>Spayed/Neutred:</h4>
-										<h4>{pet.basicInfo.spayed}</h4>
+										<h3>{pet.basicInfo.spayed}</h3>
 									</div>
+									<hr />
 									<div className="vBasic-box">
 										<h4>Microchipped:</h4>
-										<h4>{pet.basicInfo.chipped}</h4>
+										<h3>{pet.basicInfo.chipped}</h3>
 									</div>
+									<hr />
 									<div className="vBasic-box">
 										<h4>House trained:</h4>
-										<h4>{pet.basicInfo.houseTrained}</h4>
+										<h3>{pet.basicInfo.houseTrained}</h3>
 									</div>
+									<hr />
 									<div className="vBasic-box">
 										<h4>Friendly with dogs:</h4>
-										<h4>{pet.basicInfo.friendly.dogs}</h4>
+										<h3>{pet.basicInfo.friendly.dogs}</h3>
 									</div>
+									<hr />
 									<div className="vBasic-box">
 										<h4>Friendly with children:</h4>
-										<h4>{pet.basicInfo.friendly.children}</h4>
+										<h3>{pet.basicInfo.friendly.children}</h3>
 									</div>
+									<hr />
 									<div className="vBasic-box">
 										<h4>Friendly with cats:</h4>
-										<h4>{pet.basicInfo.friendly.cats}</h4>
+										<h3>{pet.basicInfo.friendly.cats}</h3>
 									</div>
+									<hr />
 									<div className="vBasic-box">
 										<h4>Adoption date:</h4>
-										<h4>{pet.adopted}</h4>
+										<h3>{pet.adopted}</h3>
 									</div>
 								</>
 							)}
 						</div>
 					</div>
 					<div className="col">
-						<div className="dashboard-pet-info-box-wrapper info-wrapper-vCare box-card card">
+						<div className="dashboard-pet-info-box-wrapper info-wrapper-vCare box-card card mt-3 align-items-start">
 							<div className="pet-box-topnav card-topper">
-								<a onClick={handleCareInfoClick}>
-									<Arrow />
-								</a>
+								{desktop < 800 && (
+									<>
+										<a onClick={handleCareInfoClick}>
+											<Arrow />
+										</a>
+									</>
+								)}
 
 								<h2>Care Info</h2>
 								<button>Edit</button>
@@ -194,10 +208,12 @@ export const Dashboard = () => {
 													: '')}
 										</h3>
 									</div>
+									<hr />
 									<div className="vCare-box">
 										<h4>Energy Level</h4>
 										<h3>{pet.energy}</h3>
 									</div>
+									<hr />
 									<div className="vCare-box">
 										<h4>Feeding Schedule</h4>
 										<h3>
@@ -210,6 +226,7 @@ export const Dashboard = () => {
 													: '')}
 										</h3>
 									</div>
+									<hr />
 									<div className="vCare-box">
 										<h4>Can be left alone</h4>
 										<h3>
@@ -222,6 +239,7 @@ export const Dashboard = () => {
 													: '')}
 										</h3>
 									</div>
+									<hr />
 									<div className="vCare-box">
 										<h4>Medications</h4>
 										{pet.careInfo.medication.map((e, key) => {
@@ -232,16 +250,21 @@ export const Dashboard = () => {
 											);
 										})}
 									</div>
+									<hr />
 									<div className="vCare-box">
 										<h4>Allergies</h4>
 										{pet.careInfo.allergies.map((e, key) => {
 											return (
-												<h3 className="vCare-allergies" key={key}>
-													{e}
-												</h3>
+												<>
+													{' '}
+													<h5 className="vCare-allergies" key={key}>
+														{e}
+													</h5>
+												</>
 											);
 										})}
 									</div>
+									<hr />
 									<div className="vCare-box">
 										<h4>Special Instructions:</h4>
 										<h3>{pet.careInfo.specialInfo}</h3>
