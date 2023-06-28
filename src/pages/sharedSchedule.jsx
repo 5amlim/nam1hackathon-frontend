@@ -19,21 +19,21 @@ export const SharedSchedule = () => {
 				<div className="row">
 					<DateCalendar fixedWeekNumber={1} showDaysOutsideCurrentMonth />
 				</div>
-				<div className="row row-cols-1 row-cols-xl-3">
-					<div className="col">
+				<div className="row row-cols-1 row-cols-xl-3 schedule-row">
+					<div className="col schedule-col">
 						<div className="upcoming-task-list task-list card box-card-2">
 							<h2 className="txt-2 no-margins">Upcoming</h2>
 							<TaskList tasks={Object.values(tasks.upcoming)} />
 						</div>
 					</div>
-					<div className="col">
+					<div className="col schedule-col">
 						{' '}
 						<div className="completed-task-list task-list card box-card-2">
 							<h2 className="txt-2 no-margins">Completed</h2>
 							<CompletedTaskList tasks={Object.values(tasks.completed)} />
 						</div>
 					</div>
-					<div className="col">
+					<div className="col schedule-col">
 						{' '}
 						<div className="pet-sitter-info-container info-container card box-card">
 							<h4 className="txt-1 no-margins">Pet Sitter</h4>
@@ -41,30 +41,32 @@ export const SharedSchedule = () => {
 								<div className="pet-sitter-contact-photo"></div>
 								<div className="pet-sitter-contact-info">
 									<h4>{listInfo.info.important.sitter.name}</h4>
-									<h5>{listInfo.info.important.sitter.number}</h5>
+									<h5>{listInfo.info.important.sitter.contact}</h5>
 								</div>
 								<div className="pet-sitter-contact-button"></div>
 							</div>
 						</div>
 					</div>
-					<div className="col">
-						<div className="vet-info-container info-container card box-card">
+					<div className="col schedule-col">
+						<div className="vet-info-container info-container card box-card ">
 							<h4 className="txt-1 no-margins">Vet Info</h4>
 							<InfoBox
 								title={'Clinic'}
 								info={listInfo.info.important.vet.locationName}
 							/>
+							
 							<InfoBox
 								title={'Vet Name'}
 								info={listInfo.info.important.vet.vetName}
 							/>
+							<hr />
 							<InfoBox
 								title={'Phone Number'}
 								info={listInfo.info.important.vet.contact}
 							/>
 						</div>
 					</div>
-					<div className="col">
+					<div className="col schedule-col">
 						<div className="insurance-info-container info-container card box-card">
 							<h4 className="txt-1 no-margins">Insurance Info</h4>
 							<InfoBox

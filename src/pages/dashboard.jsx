@@ -38,7 +38,7 @@ export const Dashboard = () => {
 	});
 	return (
 		<>
-			<div className="container">
+			<div className="container dashboard-container">
 				<div className="row row-fluid ">
 					<div className="col no-padding">
 						<div className="dashboard-pet-info-jumbo">
@@ -63,8 +63,8 @@ export const Dashboard = () => {
 						</div>
 					</div>
 				</div>
-				<div className="row row-cols-1 row-cols-xl-3">
-					<div className="col">
+				<div className="row row-cols-1 row-cols-xl-3 d-flex justify-content-between card-box-row">
+					<div className="col card-box-col">
 						<div className="care-plans-box box-card card d-flex flex-column align-items-center mt-3">
 							<div className="care-plans-box-top d-flex justify-content-between w-100 mb-3">
 								<h2>Care Plans</h2>
@@ -97,7 +97,7 @@ export const Dashboard = () => {
 							</div>
 						</div>
 					</div>
-					<div className="col">
+					<div className="col card-box-col">
 						<div className="dashboard-pet-info-box-wrapper info-wrapper-vPet box-card card mt-3">
 							<div className="pet-box-topnav card-topper">
 								<h2 className="txt-1 no-margins">Pet Info</h2>
@@ -124,7 +124,7 @@ export const Dashboard = () => {
 							</>
 						</div>
 					</div>
-					<div className="col">
+					<div className="col card-box-col">
 						{' '}
 						<div className="dashboard-pet-info-box-wrapper info-wrapper-vBasic box-card card mt-3 align-items-start">
 							<div className="pet-box-topnav card-topper">
@@ -180,7 +180,7 @@ export const Dashboard = () => {
 							)}
 						</div>
 					</div>
-					<div className="col">
+					<div className="col card-box-col">
 						<div className="dashboard-pet-info-box-wrapper info-wrapper-vCare box-card card mt-3 align-items-start">
 							<div className="pet-box-topnav card-topper">
 								{desktop < 800 && (

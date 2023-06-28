@@ -9,9 +9,13 @@ export const Nav = () => {
 				aria-label="Fourth navbar example"
 			>
 				<div className="container-fluid">
-					<a className="navbar-brand d-flex align-items-center py-0" href="#">
-						<img src="/assets/nav-logo.png" className="mr-2" />
-						<h1 className="no-margins txt-1">REDDY</h1>
+					<a
+						className="navbar-brand d-flex align-items-center py-0 h-100"
+						href="#"
+					>
+						<div className="h-100">
+							<img src="/assets/nav-logo-4.png" className="mr-2" />
+						</div>
 					</a>
 					<button
 						className="navbar-toggler"

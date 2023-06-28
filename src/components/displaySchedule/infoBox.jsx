@@ -7,6 +7,7 @@ export const InfoBox = (props) => {
 					<div className="info-box-info">{props.info}</div>
 				</div>
 				{props.call && <div className="info-box-call"></div>}
+				<hr />
 			</div>
 		</>
 	);

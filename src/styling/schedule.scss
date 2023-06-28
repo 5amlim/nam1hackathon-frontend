@@ -1,0 +1,43 @@
+.completed-time-container {
+	text-align: end;
+}
+.form-check-input {
+	position: relative;
+	margin-left: 0;
+	margin-right: 20px;
+}
+.info-box-info-wrapper {
+	width: 100%;
+}
+.info-box-container {
+	width: 100%;
+}
+.schedule-row {
+	h4 {
+		font-size: 1.2rem;
+	}
+	h4 {
+		font-size: 1rem;
+	}
+}
+@media (width < 768px) {
+	.schedule-row {
+		.col {
+			padding-right: 0 !important;
+			padding-left: 0 !important;
+		}
+	}
+}
+@media (width < 425px) {
+	.schedule-row {
+		strong {
+			font-size: 0.9rem;
+		}
+		p {
+			font-size: 0.8rem;
+		}
+		h4 {
+			font-size: 1rem;
+		}
+	}
+}
